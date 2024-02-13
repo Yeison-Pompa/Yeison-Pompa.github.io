@@ -1,0 +1,170 @@
+body {
+  background-color: #fff;
+  background-image: linear-gradient(
+      135deg,
+      transparent 0%,
+      #fff 25%,
+      #fff 75%,
+      transparent 100%
+    ),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAIklEQVQoU2N89+7dfwYsQEhIiBEkzDgkFGDzAbIY2Cv4AACvrBgJjYNGfwAAAABJRU5ErkJggg==);
+}
+
+/*Header */
+.nav{
+  background-color: #1b3030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  padding: 5px 10%;
+  height: auto;
+
+}
+.nav .links{
+  list-style: none;
+
+}
+
+.nav .links li{
+  display: inline-block;
+  padding: 0 20px;
+}
+
+
+
+.nav  .links a{
+  font-size: 700;
+  color: #eceff1;
+  text-decoration: none;
+
+}
+
+.nav .links li a:hover{
+  color: #ffbc0e;
+}
+
+
+
+
+
+
+.header{
+  
+  height: auto;
+ 
+
+}
+
+.datos{
+  display:flex;
+  display: inline-flex;
+  
+}
+
+.texto{
+margin-left: 50px;
+
+}
+
+
+  
+
+
+.container {
+  background: aliceblue;
+  width: 90%;
+  max-width: 1000px;
+  margin: 1.6em auto;
+  display: grid;
+  gap: 1.6em;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+
+.container > .header,
+.container > .contenido,
+.container > .barra,
+.container > .footer,
+.container > .div {
+  background: #fff;
+  padding: 20px;
+  border: solid 1px #1b3030;
+}
+
+.container .header,
+.container .footer {
+  grid-column: 1/6;
+  background: #1b3030;
+  color: #fff;
+  
+}
+.footer{
+  text-align: center;
+}
+
+.container > .contenido {
+  grid-column: span 3;
+}
+
+.contenido > .articulo {
+  background: #466888;
+  padding: 20px;
+  margin-top: 5px;
+  color: #dfe6e9;
+}
+.contenido .articulo h1,
+.contenido .articulo p {
+  padding: 10px;
+}
+
+.container > .barra {
+  grid-column: span 2;
+  background: #1b3030;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .barra img {
+  width: 100%;
+  margin-top: 100px;
+  
+}
+
+.container > .post {
+  background: #e3360b;
+  color: #ffff;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: all 0.5s ease;
+}
+
+.container > .post:hover {
+  cursor: pointer;
+  color: #1e272e;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    text-align: center;
+    
+  }
+
+  .container .contenido {
+    grid-column: 1/-1;
+  }
+  .container .barra {
+    grid-column: 1/6;
+  }
+  .container .post {
+    grid-column: 1/-1;
+  }
+
+  
+}
